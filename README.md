@@ -5,10 +5,10 @@
 
 This includes all countries and group of countries.
 
-## Data collection:- 
+# Data collection:- 
 Data was collected from the world bank website, i.e. electricity related data like generation (coal, oil, renewable and nuclear), utilization and distribution loss by different segments of population like; urban, rural and whole population.
 
-## Data Preprocessing:-
+# Data Preprocessing:-
 Collected data was imported into python with the help of pandas library and then pre-processed here by removal of some unnecessary columns and filling null values.
 Exploratory data analysis suggest that data before year 2000 was inaccurate. That means more than 40% data was missing. So, only 2000 - 2020 years data was considered.
 ## Also we need to import certain python libraries;
@@ -43,12 +43,12 @@ Exploratory data analysis suggest that data before year 2000 was inaccurate. Tha
     sns.barplot( x= null.values, y = null.index, palette = 'cool')
     
     
-## Data analysis:-
+# Data analysis:-
 data is prepared, now it's ready for analysis. 
 So, I imported the cleaned data file to SQL and write some query to get the summarized report so that we can use excel for data visualization and create our own dashboard.
 
-# SQL queries;
-# Comparison of access to electricity post 2000s in different countries
+## SQL queries;
+## Comparison of access to electricity post 2000s in different countries
       --Rural
       select y_country_name, avg(electricity) as rural_average_usage from
       (select y_country_name, electricity from rural_access
