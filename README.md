@@ -286,5 +286,9 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
 
 ## MS excel dashboard;
    [final project.xlsx](https://github.com/sahuashish147/World-electricity-analysis/files/10014547/final.project.xlsx)
+   
+## SQL query file for data preproccesing;
+   [SQL queries.pdf](https://github.com/sahuashish147/World-electricity-analysis/files/10014578/SQL.queries.pdf)
+
 
   
