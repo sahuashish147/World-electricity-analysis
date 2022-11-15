@@ -13,6 +13,8 @@ MS powerpoint
 
 
 This includes all countries and group of countries.
+![image](https://user-images.githubusercontent.com/111636242/201978067-28016051-9ee1-422c-b286-9f30f60f4900.png)
+
 
 # Data collection:- 
 Data was collected from the [world bank website](https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS), i.e. electricity related data like generation (coal, oil, renewable and nuclear), utilization and distribution loss by different segments of population like; urban, rural and whole population.
