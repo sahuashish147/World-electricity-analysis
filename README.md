@@ -281,7 +281,10 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     df.head() #display the top 5 rows from the table to show the preview of data structure
 
 # As per the summarized report, I've created the dynamic dashboard in MS excel and presentation in ppt format.
-[final ppt.pptx](https://github.com/sahuashish147/World-electricity-analysis/files/10014544/final.ppt.pptx)
-[final project.xlsx](https://github.com/sahuashish147/World-electricity-analysis/files/10014547/final.project.xlsx)
+## PPT (world electricity annalysis presentation);
+    [final ppt.pptx](https://github.com/sahuashish147/World-electricity-analysis/files/10014544/final.ppt.pptx)
+
+## MS excel dashboard;
+    [final project.xlsx](https://github.com/sahuashish147/World-electricity-analysis/files/10014547/final.project.xlsx)
 
   
