@@ -11,14 +11,14 @@ Data was collected from the world bank website, i.e. electricity related data li
 ## Data Preprocessing:-
 Collected data was imported into python with the help of pandas library and then pre-processed here by removal of some unnecessary columns and filling null values.
 Exploratory data analysis suggest that data before year 2000 was inaccurate. That means more than 40% data was missing. So, only 2000 - 2020 years data was considered.
-Also we need to import certain python libraries;
+## Also we need to import certain python libraries;
     import pandas as pd
     import numpy as np
     import seaborn as sns
     import matplotlib.pyplot as plt
     
     
-Data Cleaning;
+## Data Cleaning;
     #this code is only for electricity utization by rural population
     rural_access = pd.read_json("C:/Users/batman/Desktop/my territory/Projects/complete data analysis/world_bank_electricity_report/access_to_elec_rural__world/API_EG.ELC.ACCS.RU.ZS_DS2_en_csv_v2_4364070.json") #path for the downloaded data  
     rural_access.drop(0, inplace =True)
@@ -48,24 +48,24 @@ data is prepared, now it's ready for analysis.
 So, I imported the cleaned data file to SQL and write some query to get the summarized report so that we can use excel for data visualization and create our own dashboard.
 
 SQL queries;
-Comparison of access to electricity post 2000s in different countries
---Rural
-  select y_country_name, avg(electricity) as rural_average_usage from
-  (select y_country_name, electricity from rural_access
-  unpivot (electricity for years in (y_2000, y_2001, y_2002, y_2003, y_2004, y_2005, y_2006, y_2007, y_2008, y_2009, y_2010,
-  y_2011, y_2012, y_2013, y_2014, y_2015, y_2016, y_2017, y_2018, y_2019, y_2020)) as N) as M
-  group by y_country_name
+# Comparison of access to electricity post 2000s in different countries
+      --Rural
+      select y_country_name, avg(electricity) as rural_average_usage from
+      (select y_country_name, electricity from rural_access
+      unpivot (electricity for years in (y_2000, y_2001, y_2002, y_2003, y_2004, y_2005, y_2006, y_2007, y_2008, y_2009, y_2010,
+      y_2011, y_2012, y_2013, y_2014, y_2015, y_2016, y_2017, y_2018, y_2019, y_2020)) as N) as M
+      group by y_country_name
 
--- Urban
-  select y_country_name, avg(electricity) as urban_average_usage from
-  (select y_country_name, electricity from urban
-  unpivot (electricity for years in (y_2000, y_2001, y_2002, y_2003, y_2004, y_2005, y_2006, y_2007, y_2008, y_2009, y_2010,
-  y_2011, y_2012, y_2013, y_2014, y_2015, y_2016, y_2017, y_2018, y_2019, y_2020)) as N) as M
-  group by y_country_name
+    -- Urban
+      select y_country_name, avg(electricity) as urban_average_usage from
+      (select y_country_name, electricity from urban
+      unpivot (electricity for years in (y_2000, y_2001, y_2002, y_2003, y_2004, y_2005, y_2006, y_2007, y_2008, y_2009, y_2010,
+      y_2011, y_2012, y_2013, y_2014, y_2015, y_2016, y_2017, y_2018, y_2019, y_2020)) as N) as M
+      group by y_country_name
 
--- Total
-  select y_country_name, avg(electricity) as total_average_usage from
-  (select y_country_name, electricity from total
-  unpivot (electricity for years in (y_2000, y_2001, y_2002, y_2003, y_2004, y_2005, y_2006, y_2007, y_2008, y_2009, y_2010,
-  y_2011, y_2012, y_2013, y_2014, y_2015, y_2016, y_2017, y_2018, y_2019, y_2020)) as N) as M
-  group by y_country_name
+    -- Total
+      select y_country_name, avg(electricity) as total_average_usage from
+      (select y_country_name, electricity from total
+      unpivot (electricity for years in (y_2000, y_2001, y_2002, y_2003, y_2004, y_2005, y_2006, y_2007, y_2008, y_2009, y_2010,
+      y_2011, y_2012, y_2013, y_2014, y_2015, y_2016, y_2017, y_2018, y_2019, y_2020)) as N) as M
+      group by y_country_name
