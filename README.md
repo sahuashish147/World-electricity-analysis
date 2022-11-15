@@ -43,11 +43,11 @@ Exploratory data analysis suggest that data before year 2000 was inaccurate. Tha
     sns.barplot( x= null.values, y = null.index, palette = 'cool')
     
     
-Data analysis:-
+## Data analysis:-
 data is prepared, now it's ready for analysis. 
 So, I imported the cleaned data file to SQL and write some query to get the summarized report so that we can use excel for data visualization and create our own dashboard.
 
-SQL queries;
+# SQL queries;
 # Comparison of access to electricity post 2000s in different countries
       --Rural
       select y_country_name, avg(electricity) as rural_average_usage from
