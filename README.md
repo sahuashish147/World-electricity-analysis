@@ -108,6 +108,7 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     group by incomegroup
     order by avg(y_2000) Desc
 
+
     -- Rural
     select incomegroup, avg(y_2000) as y_2000, avg(y_2001) as y_2001, avg(y_2002) as y_2002, avg(y_2003) as y_2003, avg(y_2004) as y_2004,
     avg(y_2005) as y_2005, avg(y_2006) as y_2006, avg(y_2007) as y_2007, avg(y_2008) as y_2008, avg(y_2009) as y_2009, avg(y_2010) as y_2010,
@@ -264,3 +265,19 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     select A.*, B.region, B.incomegroup from Total as A
     full outer join metadata_country as B on A.y_country_code = B.country_code
     where B.tablename is not Null and B.region is not null) as N
+
+
+# Export the output data from SQL server:-
+## For exporting the data from the SQL server which the output of the above SQL query, I've connected my python with SQL server with the help of Pandas and pyodbc libraby;
+    import pyodbc
+    conn = pyodbc.connect('Driver={SQL Server};' 
+                   'Server=PREDATOR\SQLSERVER;' #name of the SQL server, my SQL server name is PREDATOR\SQLSERVER
+                   'Database=Project1;' #name of the DATAbase in which the data is stored, I've created the database- Project1 and imported all my datas here.
+                   'Trusted_Connection=no;') 
+                   
+## Once the connection is successful, we can directly write our sql query inside the read_sql of pandas and then export in csv, excel or any other file. Example;
+    df = pd.read_sql("select * from Total", conn) #this code help to read the sql query once the connection is established with the help of above code
+    df.to_csv("C:/Users/batman/Desktop/total.csv", index = False) #export the output data into csv file from the above output
+    df.head() #display the top 5 rows from the table to show the preview of data structure
+    
+  
