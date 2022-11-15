@@ -279,5 +279,9 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     df = pd.read_sql("select * from Total", conn) #this code help to read the sql query once the connection is established with the help of above code
     df.to_csv("C:/Users/batman/Desktop/total.csv", index = False) #export the output data into csv file from the above output
     df.head() #display the top 5 rows from the table to show the preview of data structure
-    
+
+# As per the summarized report, I've created the dynamic dashboard in MS excel and presentation in ppt format.
+[final ppt.pptx](https://github.com/sahuashish147/World-electricity-analysis/files/10014544/final.ppt.pptx)
+[final project.xlsx](https://github.com/sahuashish147/World-electricity-analysis/files/10014547/final.project.xlsx)
+
   
