@@ -3,6 +3,12 @@
 * Generation of electricity by different sources (coal, nuclear, oil, renewable, etc).
 * Part of electricity get lost due to distributiion and maintainance loss.
 
+Tool:-
+Python
+SQL
+MS excel
+MS powerpoint
+
 This includes all countries and group of countries.
 
 # Data collection:- 
