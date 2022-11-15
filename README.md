@@ -9,6 +9,9 @@ SQL
 MS excel
 MS powerpoint
 
+![image](https://user-images.githubusercontent.com/111636242/201977847-a4666310-c2f9-4088-b7f8-e30e8d669b39.png)
+
+
 This includes all countries and group of countries.
 
 # Data collection:- 
