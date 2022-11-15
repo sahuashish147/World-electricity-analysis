@@ -15,6 +15,13 @@ MS powerpoint
 This includes all countries and group of countries.
 ![image](https://user-images.githubusercontent.com/111636242/201978067-28016051-9ee1-422c-b286-9f30f60f4900.png)
 
+Top 10 countries for power generation loss;
+![image](https://user-images.githubusercontent.com/111636242/201979875-b8fce4a5-d62e-4a0e-a9f3-c20c491c3b02.png)
+
+Top 5 countries who generate electricity by renewable energy resource;
+![image](https://user-images.githubusercontent.com/111636242/201980159-1cf1b7bb-6bf3-45c9-be17-d3572fb4e763.png)
+
+
 
 # Data collection:- 
 Data was collected from the [world bank website](https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS), i.e. electricity related data like generation (coal, oil, renewable and nuclear), utilization and distribution loss by different segments of population like; urban, rural and whole population.
@@ -104,6 +111,8 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     (select A.*, B.region, B.incomegroup, B.specialnotes from rural_access as A
     full outer join metadata_country as B on A.y_country_code = B.country_code
     where B.region is not Null or A.y_country_name like '%World%') as N
+![image](https://user-images.githubusercontent.com/111636242/201979065-b3059c3b-8574-46a9-bb5b-37266ed94b0a.png)
+
     
     
 ## 3. Income wise countries segmentation for electricity utilization 
@@ -143,6 +152,7 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     where incomegroup is not null
     group by incomegroup
     order by avg(y_2000) Desc
+![image](https://user-images.githubusercontent.com/111636242/201979271-7fe90e3f-12f6-40d7-a7f9-869562c4bc23.png)
     
     
 ## 4 A chart to depict the increase in the count of countries with greater than 75% electricity access in rural areas across different year
@@ -184,6 +194,7 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     y_2011, y_2012, y_2013, y_2014, y_2015, y_2016, y_2017, y_2018, y_2019, y_2020)) m) o
     group by SUBSTRING(years, 3,4)
     order by SUBSTRING(years, 3,4)
+![image](https://user-images.githubusercontent.com/111636242/201979395-8f66033b-f739-4697-813e-2bab5efb70ae.png)
     
 
 ## 5 A way/KPI to present the evolution of nuclear power presence grouped by Region and income group.
@@ -242,6 +253,7 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     where incomegroup is not null
     group by region
     order by avg(y_2000) Desc
+![image](https://user-images.githubusercontent.com/111636242/201979494-19a054b4-c1d0-45fd-a581-d92130ea72a5.png)
 
 
 ## 6 A chart to present the production of electricity across different sources (nuclear, oil, etc.) as a function of time
@@ -254,7 +266,9 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
     select * from oil
     union
     select *, 8.25 as y_2015 from power_loss) as N
-    
+![image](https://user-images.githubusercontent.com/111636242/201979577-b18e95bc-5df5-4371-afe5-56285c3707f2.png)
+
+
 ## Average percent of the population utilize electricity (groups of countries)
     select A.y_Country_Name, y_2000,
     y_2001, y_2002, y_2003, y_2004, y_2005, y_2006, y_2007, y_2008, y_2009, y_2010,
