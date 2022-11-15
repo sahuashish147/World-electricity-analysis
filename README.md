@@ -6,7 +6,7 @@
 This includes all countries and group of countries.
 
 # Data collection:- 
-Data was collected from the world bank website, i.e. electricity related data like generation (coal, oil, renewable and nuclear), utilization and distribution loss by different segments of population like; urban, rural and whole population.
+Data was collected from the [world bank website](https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS), i.e. electricity related data like generation (coal, oil, renewable and nuclear), utilization and distribution loss by different segments of population like; urban, rural and whole population.
 
 # Data Preprocessing:-
 Collected data was imported into python with the help of pandas library and then pre-processed here by removal of some unnecessary columns and filling null values.
