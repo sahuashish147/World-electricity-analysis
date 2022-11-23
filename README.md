@@ -316,4 +316,5 @@ So, I imported the cleaned data file to SQL and write some query to get the summ
    [SQL queries.pdf](https://github.com/sahuashish147/World-electricity-analysis/files/10014578/SQL.queries.pdf)
 
 
-  
+## If anyone wants to add some insights, feel free to add. Find the below gmail id for any queries.
+Email:- sahu.ashish147@gmail.com
