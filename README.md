@@ -1,7 +1,7 @@
 ## World-electricity-analysis
-* Analysis of electricity utilization by the percent of population.
+* Analysis of electricity utilization by the percent of the population.
 * Generation of electricity by different sources (coal, nuclear, oil, renewable, etc).
-* Part of electricity get lost due to distributiion and maintainance loss.
+* Part of electricity gets lost due to distribution and maintenance loss.
 
 Tool:-
 Python
